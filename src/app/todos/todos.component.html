@@ -1,0 +1,12 @@
+<a [routerLink]="['/todo', todo.id]" 
+*ngFor="let todo of ToDoList"
+>
+  <div class="card mb-3 mt-4 ml-4 d-inline-flex" [hilight]="todo.status" [ngClass]="todo.status" style="max-width: 18rem;">
+    <div class="card-header" #header>{{todo.header}}</div>
+    <div class="card-body text-primary">
+      <h5 class="card-title">{{todo.title}}</h5>
+      <p class="card-text">{{todo.description}}</p>
+      <p *appUnless="true">UNLESS</p>
+    </div>
+  </div>
+</a>

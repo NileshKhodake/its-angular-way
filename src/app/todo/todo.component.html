@@ -1,0 +1,15 @@
+<div class="ml-4 mt-4 mr-4 card">
+  <div class="card-header">
+    <button type="button" class="btn btn-primary">
+    Actions <span class="badge badge-light">4</span>
+    </button>
+    <span class="badge badge-danger mr-2 float-right">{{this.count}}</span>
+  </div>
+  <div class="card-header">
+  	<span class="badge badge-danger mr-2">Action-1</span>
+    <span class="badge badge-warning mr-2">Action-2</span>
+    <span class="badge badge-success mr-2">Action-3</span>
+    <span class="badge badge-success mr-2">Action-4</span>
+  </div>
+  <to-do-content [todo]="this.toDo" (clickNoted)="onUpdate($event)"></to-do-content>
+</div>
